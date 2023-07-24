@@ -3,7 +3,6 @@ html(class="no-js", lang="ru")
 
     include ../components/head/head.pug
     include ../components/example/example.pug
-    include ../components/footer/footer.pug
 
     head
         +head(head.defaults)
@@ -13,6 +12,7 @@ html(class="no-js", lang="ru")
         section.page__wrapper
 
             //- Include your components here
+            +example()
 
             .page__buffer
 
