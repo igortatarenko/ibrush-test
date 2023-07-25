@@ -1,0 +1,50 @@
+.quote {
+    padding-top: 3.44rem;
+    padding-bottom: 2.81rem;
+    @media (max-width: $mobile) {
+        padding-top: 2.13rem;
+        padding-bottom: 3.5rem;
+    }
+    &__title {
+        margin-bottom: 1.31rem;
+        @media (max-width: $mobile) {
+            margin-bottom: 0.75rem;
+        }
+    }
+    &__wrap {
+        display: flex;
+        column-gap: 1.5rem;
+        @media (max-width: $mobile) {
+            margin-bottom: 1.19rem;
+        }
+    }
+    &__blockquote {
+        margin: 0;
+        padding-top: 0.57rem;
+        font-family: $OpenSans;
+        font-style: italic;
+        line-height: 1.33;
+        @media (max-width: $mobile) {
+            padding-top: 0.5rem;
+            line-height: 1.42;
+        }
+    }
+    &__text {
+        margin-top: 0;
+        margin-bottom: 2rem;
+        color: #1a1a1a;
+        font-size: 1.125rem;
+        @media (max-width: $mobile) {
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+    }
+    &__author {
+        margin: 0;
+        color: $placeholder_primary;
+        font-size: 1rem;
+        @media (max-width: $mobile) {
+            font-size: 0.875rem;
+        }
+    }
+}

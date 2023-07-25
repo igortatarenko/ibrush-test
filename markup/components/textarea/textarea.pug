@@ -1,0 +1,4 @@
+mixin textarea(name, id, placeholder, className)
+    .textarea(class=className)
+        textarea(name=name, id=id, placeholder=placeholder).textarea__field
+        span.input__placeholder= placeholder

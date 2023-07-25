@@ -1,0 +1,17 @@
+mixin rating(className)
+    .rating(class=className)
+        input(type="radio" name="rating" id="star5" value="5").rating__input
+        label(for="star5").rating__label
+            != pugHelpers.Icon.call(locals, {iconName: 'star', className: 'rating__icon', iconWidth: '25', iconHeight: '25'})
+        input(type="radio" name="rating" id="star4" value="4").rating__input
+        label(for="star4").rating__label
+            != pugHelpers.Icon.call(locals, {iconName: 'star', className: 'rating__icon', iconWidth: '25', iconHeight: '25'})
+        input(type="radio" name="rating" id="star3" value="3").rating__input
+        label(for="star3").rating__label
+            != pugHelpers.Icon.call(locals, {iconName: 'star', className: 'rating__icon', iconWidth: '25', iconHeight: '25'})
+        input(type="radio" name="rating" id="star2" value="2").rating__input
+        label(for="star2").rating__label
+            != pugHelpers.Icon.call(locals, {iconName: 'star', className: 'rating__icon', iconWidth: '25', iconHeight: '25'})
+        input(type="radio" name="rating" id="star1" value="1").rating__input
+        label(for="star1").rating__label
+            != pugHelpers.Icon.call(locals, {iconName: 'star', className: 'rating__icon', iconWidth: '25', iconHeight: '25'})

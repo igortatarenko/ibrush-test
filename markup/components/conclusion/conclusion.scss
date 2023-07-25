@@ -1,0 +1,26 @@
+.conclusion {
+    padding-top: 2.81rem;
+    padding-bottom: 4.63rem;
+    @media (max-width: $mobile) {
+        padding-top: 1.56rem;
+        padding-bottom: 1.88rem;
+    }
+    &__title {
+        margin-bottom: 1.63rem;
+        @media (max-width: $mobile) {
+            margin-bottom: 1.31rem;
+            font-size: 1.3125rem;
+        }
+    }
+    &__text {
+        margin: 0;
+        color: $text_primary;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        line-height: 1.5;
+        @media (max-width: $mobile) {
+            font-size: 0.875rem;
+            line-height: 1.28;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+include ../rating/rating.pug
+include ../select/select.pug
+include ../input/input.pug
+include ../textarea/textarea.pug
+
+mixin feedback(data)
+    section.feedback
+        .container
+            form
+                h3.feedback__title Оцените статью
+                +rating("feedback__rating")
+                h3.feedback__title Добавить комментарий к книге
+                .feedback__form
+                    +input("text", "name", "name", "Имя")
+                    +input("email", "email", "email", "E-mail")
+                    +select()
+                        option(data-placeholder="true") Выберите книгу
+                        option(value="value1") JavaScript ниндзя
+                        option(value="value2") Pragmatic Guide to JavaScript
+                        option(value="value3") Pro JavaScript Techniques
+                        option(value="value4") Выразительный JavaScript
+                    +textarea("feedback", "feedback", "Ваш отзыв", 'feedback__textarea')
+                    input(type="submit" value="ОТПРАВИТЬ").button.feedback__button
+

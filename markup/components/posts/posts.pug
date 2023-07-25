@@ -1,0 +1,28 @@
+mixin posts(data)
+    article.posts
+        .container
+            h2.posts__title Похожие посты
+            .swiper
+                .posts__list.swiper-wrapper
+                    a(href='javascript:void(0)').posts__item.swiper-slide
+                        .posts__image
+                            picture
+                                source(srcset="%=static=%img/content/react.jpg" media="(min-width: 768px)")
+                                source(srcset="%=static=%img/content/react@2x.jpg" media="(max-width: 767px)")
+                                img(src="%=static=%img/content/react.jpg" alt="")
+                        h3.posts__name События жизненного цикла ReactJS
+                    a(href='javascript:void(0)').posts__item.swiper-slide
+                        .posts__image
+                            picture
+                                source(srcset="%=static=%img/content/grid.jpg" media="(min-width: 768px)")
+                                source(srcset="%=static=%img/content/grid@2x.jpg" media="(max-width: 767px)")
+                                img(src="%=static=%img/content/grid.jpg" alt="")
+                        h3.posts__name CSS Grids. Полное руководство
+                    a(href='javascript:void(0)').posts__item.swiper-slide
+                        .posts__image
+                            picture
+                                source(srcset="%=static=%img/content/js.jpg" media="(min-width: 768px)")
+                                source(srcset="%=static=%img/content/js@2x.jpg" media="(max-width: 767px)")
+                                img(src="%=static=%img/content/js.jpg" alt="")
+                        h3.posts__name Асинхронность в JavaScript
+                .swiper-pagination

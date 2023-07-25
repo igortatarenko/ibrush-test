@@ -1,0 +1,10 @@
+mixin quote(data)
+    section.quote
+        .container
+            h2.quote__title Серверный JavaScript
+            .quote__wrap
+                span.quote__icon
+                    != pugHelpers.Icon.call(locals, {iconName: 'quotation', iconWidth: '34', iconHeight: '34'})
+                blockquote.quote__blockquote
+                    p.quote__text Разработчики и клиенты часто неправильно понимают, что такое система. Они видят графический интерфейс и думают, что он и есть система. Они определяют систему в терминах графического интерфейса и считают, что должны сразу начать работу с графическим интерфейсом. Они не понимают важнейшего принципа: ввод/вывод не важен.
+                    p.quote__author — Р. Мартин

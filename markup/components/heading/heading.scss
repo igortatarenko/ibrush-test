@@ -1,0 +1,105 @@
+.heading {
+    padding-top: 5rem;
+    @media (max-width: $mobile) {
+        padding-top: 2.5rem;
+    }
+    &__container {
+        @media (max-width: $mobile) {
+            padding-right: 0;
+        }
+    }
+    &__title {
+        margin-bottom: 4rem;
+        @media (max-width: $mobile) {
+            margin-bottom: 2.5rem;
+        }
+    }
+    &__hero {
+        position: relative;
+        padding-bottom: 3.13rem;
+        border-bottom: 1px solid #dcdcdc;
+        @media (max-width: $mobile) {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+    &__date {
+        position: absolute;
+        z-index: 1;
+        top: 0.81rem;
+        left: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 7.5rem;
+        height: 6.25rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.37rem;
+        color: #1a1a1a;
+        font-family: $Merriweather;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+    &__day {
+        position: relative;
+        font-size: 1.5rem;
+        line-height: 1.04;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0.69rem;
+            right: 1.94rem;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 2.5px 0 2.5px 5px;
+            border-color: transparent transparent transparent #1a1a1a;
+        }
+    }
+    &__month {
+        font-size: 1rem;
+        line-height: 1.04;
+    }
+    &__image {
+        position: relative;
+        margin-bottom: 1.25rem;
+        overflow: hidden;
+        @media (max-width: $mobile) {
+            margin-bottom: 0;
+            padding-bottom: 1rem;
+            overflow: auto;
+        }
+        picture {
+            display: block;
+            font-size: 0; // обнуляем отступ у тэга
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 5rem;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 6px 9px 6px;
+            border-color: transparent transparent #ffffff transparent;
+            @media (max-width: $mobile) {
+                display: none;
+            }
+        }
+    }
+    &__description {
+        margin: 0;
+        color: $text_primary;
+        font-family: Arial, sans-serif;
+        font-size: 0.875rem;
+        font-style: italic;
+        line-height: 1.28;
+        @media (max-width: $mobile) {
+            margin-bottom: 1.63rem;
+        }
+    }
+}

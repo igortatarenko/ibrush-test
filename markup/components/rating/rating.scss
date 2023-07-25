@@ -1,0 +1,25 @@
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    column-gap: 0.63rem;
+    &__icon {
+        stroke: #979797;
+        fill: transparent;
+        transition: 0.2s;
+    }
+    &__label {
+        cursor: pointer;
+    }
+    &__input {
+        position: absolute;
+        width: 1.5625rem;
+        height: 1.5625rem;
+        opacity: 0;
+        pointer-events: none;
+        &:checked ~ .rating__label .rating__icon {
+            stroke: transparent;
+            fill: #ffb400;
+        }
+    }
+}

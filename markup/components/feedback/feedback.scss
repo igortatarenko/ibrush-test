@@ -1,0 +1,48 @@
+.feedback {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    background: $background_primary;
+    &__title {
+        &:first-of-type {
+            margin-bottom: 0.62rem;
+            @media (max-width: $mobile) {
+                margin-bottom: 0.94rem;
+            }
+        }
+        &:last-of-type {
+            margin-bottom: 0.94rem;
+            @media (max-width: $mobile) {
+                margin-bottom: 0.62rem;
+            }
+        }
+    }
+    &__rating {
+        margin-bottom: 1.88rem;
+        @media (max-width: $mobile) {
+            margin-bottom: 1.25rem;
+        }
+    }
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(3, 14.125rem);
+        column-gap: 1.87rem;
+        row-gap: 1.25rem;
+        @media (max-width: $mobile) {
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.63rem;
+            column-gap: initial;
+        }
+    }
+    &__textarea {
+        grid-column: 1/4;
+        @media (max-width: $mobile) {
+            grid-column: initial;
+        }
+    }
+    &__button {
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+}

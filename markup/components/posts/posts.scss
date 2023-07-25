@@ -1,0 +1,34 @@
+.posts {
+    padding-top: 3.75rem;
+    padding-bottom: 4.69rem;
+    @media (max-width: $mobile) {
+        padding-top: 2.25rem;
+        padding-bottom: 4.12rem;
+    }
+    &__title {
+        margin-bottom: 2.44rem;
+        @media (max-width: $mobile) {
+            margin-bottom: 1rem;
+        }
+    }
+    &__list {
+        @media (max-width: $mobile) {
+            padding-bottom: 2.25rem;
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    &__image {
+        margin-bottom: 1.19rem;
+        img {
+            width: 100%;
+        }
+    }
+}
