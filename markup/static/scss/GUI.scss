@@ -1,2 +1,84 @@
 // GUI stylies of the project
 // For example, styles of the links, buttons and so on.
+h1 {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    color: $blue;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: $Consolas;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: calc(50% - 0.063rem);
+        width: 19%;
+        height: 0.0625rem;
+        background-color: #dbdbdb;
+    }
+    &::before {
+        left: 0;
+    }
+    &::after {
+        right: 0;
+    }
+    @media (max-width: $mobile) {
+        font-size: 1.4375rem;
+        line-height: 1.08;
+    }
+}
+
+h2 {
+    margin: 0;
+    color: #000000;
+    font-family: $Consolas;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.28;
+    @media (max-width: $mobile) {
+        font-size: 1.4375rem;
+        font-weight: 700;
+        line-height: 1.56;
+    }
+}
+
+h3 {
+    margin: 0;
+    color: $text_primary;
+    font-family: $Consolas;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    color: $blue;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.28;
+    text-decoration-line: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.button {
+    height: 2.75rem;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border-radius: 2px;
+    background: $blue;
+    border: 0;
+    cursor: pointer;
+    transition: background 0.25s;
+    &:hover {
+        background-color: rgba($blue, 0.8);
+    }
+}

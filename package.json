@@ -6,7 +6,9 @@
   "directories": {},
   "dependencies": {
     "@babel/core": "^7.22.9",
-    "@babel/preset-env": "^7.22.9"
+    "@babel/preset-env": "^7.22.9",
+    "slim-select": "^2.6.0",
+    "swiper": "^10.0.4"
   },
   "devDependencies": {
     "gulp": "^4.0.2"

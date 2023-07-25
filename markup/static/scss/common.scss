@@ -1,22 +1,125 @@
 // Common styles of the project
 
-html, body {
+html,
+body {
     height: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-.page {
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .page__wrapper {
     min-height: 100%;
-    margin-bottom: -50px;
 }
 
 * html .page__wrapper {
     height: 100%;
 }
 
-.page__buffer {
-    height: 50px;
+.container {
+    width: 100%;
+    max-width: 46.125rem;
+    margin-right: auto;
+    margin-left: auto;
+    @media (max-width: $mobile) {
+        max-width: 100%;
+        width: 100%;
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+}
+
+.mobile-hidden {
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.desktop-hidden {
+    @media (min-width: $desktop) {
+        display: none;
+    }
+}
+
+div.ss-content {
+    margin-top: 0.62rem !important;
+    border: none;
+    box-shadow: 0px 2px 15px 0px rgba(154, 154, 154, 0.5);
+    &.ss-open-below {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .ss-list {
+        .ss-option {
+            align-items: center;
+            padding: 0 0 0 1.56rem;
+            color: $text_secondary;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.875rem;
+            line-height: 2.75rem;
+            &:not(.ss-disabled).ss-selected,
+            &:hover {
+                color: inherit;
+                background: $background_primary;
+            }
+            &:not(.ss-disabled).ss-selected {
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 0.4375rem;
+                    background-color: $blue;
+                }
+            }
+        }
+    }
+}
+
+.swiper {
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 0;
+    }
+    .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: auto 0.75rem;
+    }
+    .swiper-pagination-bullet {
+        width: 0.625rem;
+        height: 0.625rem;
+        vertical-align: middle;
+    }
+    .swiper-pagination-bullet-active {
+        width: 0.9375rem;
+        height: 0.9375rem;
+    }
+}
+
+@media (max-width: $mobile) {
+    *::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        border-radius: 12px;
+    }
+
+    *::-webkit-scrollbar-track {
+        border-radius: 12px;
+        background: #bababa;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        width: 4px;
+        height: 4px;
+        background-color: #282ff0;
+        border-radius: 12px;
+        border: 0px none #ffffff;
+    }
 }
